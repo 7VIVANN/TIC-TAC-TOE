@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TIC-TAC-TOE</string>
+    <string name="player_zero_value">O</string>
+    <string name="game_dialog_title">WELCOME</string>
+    <string name="done">DONE</string>
+    <string name="game_empty_name">EMPTY NAME!!!</string>
+    <string name="game_dialog_same_names">BOTH NAMES ARE THE SAME!!!</string>
+    <string name="player1_hint">Player1 Hint</string>
+    <string name="player2_hint">Player2 Hint</string>
+    <string name="game_end_dialog_headline">GAME OVER!!</string>
+    <string name="hello_there">HELLO THERE!!</string>
+    <string name="start">start</string>
+</resources>
