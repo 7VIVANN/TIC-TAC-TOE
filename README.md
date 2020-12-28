@@ -12,7 +12,7 @@ Some of the key features implemnted are :
 
 ### TODO
 <ul>
-<li>Implementing the simple  Room database into the app to store the winner of a session of plays. </li>
+<li>~~Implementing the simple  Room database into the app to store the winner of a session of plays.~~ </li>
 <li>Implement data binding for displaying the winner</li>
 <li>Remove the text watchers on First Player Name and Second Player Name</li>
 <li>Maybe Maybe Maybe implement a simple computer interactive mode</li>

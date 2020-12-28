@@ -37,6 +37,7 @@ public class GameEndDialog extends DialogFragment {
                 .setView(rootView)
                 .setCancelable(false)
                 .setPositiveButton(R.string.done, ((dialog, which)->onNewGame()))
+                .setNegativeButton(R.string.cancel,((dialog, which) -> dismiss()))
                 .create();
         alertDialog.setCanceledOnTouchOutside(false);
 //        alertDialog.setCancelable(false);
@@ -51,11 +52,9 @@ public class GameEndDialog extends DialogFragment {
 
 
     private void initViews() {
-
         rootView = LayoutInflater.from(getContext())
                 .inflate(R.layout.game_end_dialog, null, false);
 
         ((TextView) rootView.findViewById(R.id.tv_winner)).setText(winnerName);
-
     }
 }
