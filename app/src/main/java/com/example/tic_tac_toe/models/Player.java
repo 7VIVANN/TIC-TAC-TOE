@@ -1,5 +1,7 @@
 package com.example.tic_tac_toe.models;
 
+import androidx.room.Entity;
+
 public class Player {
 
     public String name;

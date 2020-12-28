@@ -10,4 +10,5 @@
     <string name="game_end_dialog_headline">GAME OVER!!</string>
     <string name="hello_there">HELLO THERE!!</string>
     <string name="start">start</string>
+    <string name="cancel">CANCEL</string>
 </resources>

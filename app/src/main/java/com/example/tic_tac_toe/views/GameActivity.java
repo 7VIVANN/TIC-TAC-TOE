@@ -9,11 +9,15 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.tic_tac_toe.R;
+import com.example.tic_tac_toe.data.PlayerData;
 import com.example.tic_tac_toe.databinding.ActivityGameBinding;
 import com.example.tic_tac_toe.models.Player;
 import com.example.tic_tac_toe.viewmodels.GameViewModel;
 
 public class GameActivity extends AppCompatActivity {
+    private String player1;
+    private String player2;
+
     public static final String GAME_BEGIN_DIALOG_TAG = "game_dialog_tag";
     public static final String GAME_END_DIALOG_TAG = "game_ending_dialog_tag";
 
@@ -27,6 +31,8 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void onPlayerSet(String player1, String player2) {
+        this.player1 = player1;
+        this.player2 = player2;
         initDataBinding(player1, player2);
     }
 
@@ -36,6 +42,12 @@ public class GameActivity extends AppCompatActivity {
         gameViewModel.init(player1, player2);
         activityGameBinding.setGameViewModel(gameViewModel);
         setUpOnGameEndListener();
+    }
+
+    public void saveWinners(Player winner)
+    {
+        //insert the data into repository
+        gameViewModel.insert(player1, player2, winner.name);
     }
 
     public void promptForPlayers() {
@@ -54,5 +66,6 @@ public class GameActivity extends AppCompatActivity {
         GameEndDialog dialog = GameEndDialog.newInstance(this, winnerName);
         dialog.setCancelable(false);
         dialog.show(getSupportFragmentManager(), GAME_END_DIALOG_TAG);
+        saveWinners(winner);
     }
 }
