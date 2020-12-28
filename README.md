@@ -10,7 +10,7 @@ Some of the key features implemnted are :
 <li>Dialog Fragment and Activity communication</li>
 </ol>
 
-###TODO
+### TODO
 <ul>
 <li>Implement data binding for displaying the winner</li>
 <li>Remove the text watchers on First Player Name and Second Player Name</li>
